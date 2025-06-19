@@ -1,0 +1,45 @@
+h1{
+    text-transform: uppercase;
+    background-color: rgba(165, 42, 42, 0.756);
+    color: green;
+    height: 500px ;
+}
+h1::first-letter{
+    color: yellow;
+}
+h1:hover{
+    background-color: #be0000;
+}
+
+p::first-line{
+    color: red;
+}
+
+.link{
+    color: aliceblue;
+    background-color: orange;
+}
+.link1{
+    color: aqua;
+    background-color: brown;
+}
+.link2{
+    background-color: black;
+    color: bisque;
+}
+.link3{
+    color: plum;
+    background-color: aquamarine;
+}
+.link:hover{
+    background-color: #ff1111;
+}
+.link1:hover{
+    background-color: #429701;
+}
+.link2:hover{
+    background-color: #f35ebf;
+}
+.link3:hover{
+    background-color: #13908a;
+}
