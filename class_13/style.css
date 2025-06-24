@@ -1,0 +1,31 @@
+.ul{
+    margin-left: 400px;
+    font-size: xx-small;
+    list-style: none;
+    text-transform: capitalize;
+}
+.hover{
+    background-color: red;
+    display: inline-block;
+}
+.hover:hover{
+    background-color: rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
+}
+.aqua{
+    background-color: aqua;
+    border: 1px solid red;
+    width: 170px;
+    height: 170px;
+    margin-left: 40px;
+    margin-top: 40px;
+    border-radius: 0px 40px 40px;
+    box-shadow: 1px 1px 100px 0px;
+}
+.h1{
+    background-color: antiquewhite;
+}
+p{
+    font-size: x-small;
+    margin: 0px 800px 0px 500px;
+}
