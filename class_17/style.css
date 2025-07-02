@@ -1,0 +1,43 @@
+div{
+    display: flex;
+}
+.container{
+    border: 5px solid black;
+    background-color: bisque;
+    justify-content: center;
+    height: 100vh;
+    gap: 30px;
+}
+.box1{
+    border: 1px solid black;
+    flex: 1;
+    background-color: aqua;
+    width: 100px;
+    height: 100px;
+    flex-grow: 2;
+    order: 1;
+}
+.box2{
+    background-color: rgb(9, 255, 0);
+    border: 1px solid black;
+    width: 100px;
+    height: 100px;
+    flex-grow: 2;
+    order: 2;
+}
+.box3{
+    background-color: rgb(255, 0, 242);
+    border: 1px solid black;
+    width: 100px;
+    height: 100px;
+    flex-grow: 2;
+    order: -1;
+}
+.box4{
+    background-color: rgb(132, 0, 255);
+    border: 1px solid black;
+    width: 100px;
+    height: 100px;
+    flex-grow: 2;
+    order: -2;
+}
