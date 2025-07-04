@@ -1,0 +1,61 @@
+.on {
+    background-color: yellow;
+    border: 3px solid black;
+    padding: 20px 22px 22px 22px;
+}
+
+.thr {
+    background-color: rgb(255, 0, 0);
+    border: 3px solid black;
+    padding: 20px 22px 22px 22px;
+}
+
+.two {
+    background-color: rgb(0, 242, 255);
+    border: 3px solid black;
+    padding-bottom: 5px;
+    height: 15px;
+    font-size: medium;
+}
+
+.subcontent{
+    display: flex;
+    gap: 5px;
+    margin: 10px;
+}
+.four {
+  background-color: var(--secondary-bg);
+    background: linear-gradient(200deg, #ff0000, #106e13, #4c00ff, #ff00b3);
+}
+
+.five {
+    background-color: rgb(255, 0, 0);
+}
+
+.heading {
+    font-size: 50px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    position: relative;
+    cursor: pointer;
+    width: max-content;
+
+}
+
+.heading::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: linear-gradient(200deg, #ff0000, #106e13, #4c00ff, #ff00b3);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: 0.3s ease;
+}
+
+.heading:hover {
+    max-width: max-content;
+}
+
+.heading:hover::after {
+    width: 100%;
+}
