@@ -1,0 +1,31 @@
+.img-container {
+    display: flex;
+    justify-content: center;
+}
+
+.b1 {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+}
+
+.container button {
+    font-size: 28px;
+    background-color: aqua;
+    outline: none;
+    margin: 5px;
+
+}
+
+.hiden {
+    visibility: hidden;
+}
+
+.show {
+    visibility: visible;
+}

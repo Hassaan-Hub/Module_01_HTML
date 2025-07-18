@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js"></script>
+</head>
+<body>
+
+    <input type="text" placeholder="Hassaan" onfocus="this.style.backgroundColor='red'"
+        onblur="this.style.backgroundColor='transparent'">
+    <br>
+    <form onsubmit="chackAdress('email' , 'password')">
+        Email:
+        <input type="email" id="email" placeholder="Email">
+        <input type="password" id="password">
+        <button>Submit</button>
+    </form>
+
+    <p id="pera">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat labore reprehenderit ex similique. At possimus
+        assumenda odit excepturi necessitatibus est, iste hic delectus labore cum iusto quo doloremque praesentium!
+        Nihil?
+    </p>
+
+    <button class="b1" onclick="expandText()">Expand Text</button>
+    <div class="img-container">
+        <img class="m1" width="60%"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZX2T7H5_uD1XBV0COeUlbtzAG8BabmVXwKQ&s"
+            id="hide" />
+    </div>
+
+    <div class="container">
+        <button onclick="makeInvisible()">Hide Image</button>
+        <button onclick="makeVisible()">Show Image</button>
+    </div>
+
+</body>
+
+</html>
