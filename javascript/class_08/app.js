@@ -4,10 +4,6 @@ console.log("SMIT B12");
 console.log("SMIT B12");
 console.log("SMIT B12");
 console.log("SMIT B12");
-console.log("SMIT B12");
-console.log("SMIT B12");
-console.log("SMIT B12");
-console.log("SMIT B12");
 
 for (var i = 1; i <= 5; i++) {
     console.log("SMIT Batch12");

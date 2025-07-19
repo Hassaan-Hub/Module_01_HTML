@@ -1,5 +1,5 @@
 var nam = 1;
-console.log(nam++);
+console.log(nam);
 
 nam++;
 console.log(nam);

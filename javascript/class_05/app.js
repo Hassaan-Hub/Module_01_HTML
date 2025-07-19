@@ -1,11 +1,34 @@
+// = → Assignment
+// 👉 It means: “put this value into the variable.”
+
+// == → Comparison (loose)
+// 👉 It means: “Are these two values equal?”
+// 👉 It ignores type (it converts "6" to 6 internally)
+
+// === → Comparison (strict)
+// 👉 It means: “Are these exactly the same?”
+// 👉 It checks both value and type
+
+
+
 var fullname = "Mark"
 if(fullname === "Mark"){
     console.log("Mark is in the class!");
+}
+
+var number = 6
+//    ( ture & false)
+if(number === "6"){    // its must
+    console.log("This is Num is 06!");
+    
+}else if(number == "6"){
+    console.log("This is Num is 16!");
     
 }
 
-var name = "hello"
-if(name === "hello"){
+
+var name1 = "hello"
+if(name1 === "hello"){
     console.log("hello guys my new vloge!");
     
 }

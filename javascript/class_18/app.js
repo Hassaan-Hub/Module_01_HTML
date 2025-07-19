@@ -4,12 +4,16 @@ function addTodo(){
     var todos = document.getElementById('todos')
     var inpVal = document.getElementById('put')
 
+    todos.setAttribute('class', 'todosContainer')
+
     var element = document.createElement("div")
     element.setAttribute('id' , idcount)
     element.setAttribute('class' , "todo")
 
     element.innerHTML = `
-    <p>${inpVal.value}</p> <button onclick="deleteTodo(${idcount})">Delete</button> <button onclick="updateTodo(${idcount})">Update</button>
+    <p>${inpVal.value}</p>
+    <button onclick="deleteTodo(${idcount})">Delete</button> 
+    <button onclick="updateTodo(${idcount})">Update</button>
     `
 
     todos.appendChild(element)
@@ -27,10 +31,8 @@ function updateTodo(id){
     var todoItem = document.getElementById(id)
 
     todoItem.innerHTML = `
-    <p>${inpVal.value}</p> <button onclick="deleteTodo(${id})">Delete</button> <button onclick="updateTodo(${id})">Update</button>
+    <p>${inpVal.value}</p>
+    <button onclick="deleteTodo(${id})">Delete</button>
+    <button onclick="updateTodo(${id})">Update</button>
 `
 }
-
-
-
-
