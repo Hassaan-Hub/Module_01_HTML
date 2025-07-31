@@ -1,0 +1,18 @@
+body{
+    background: #000;
+    display: flex;
+    align-items: center;    
+    justify-content: center;
+    height: 70vh;
+}
+.blue{
+    color: #ffffff;
+    background-color: gray;
+    background: linear-gradient(#ff0000, #d900ff, #f2ff00);
+    font-size: 60px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 10px;
+    border: 5px solid #ddd6d6;
+    border-radius: 10px;
+    box-shadow: 1px 1px 10px 3px rgb(185, 183, 183);
+}
