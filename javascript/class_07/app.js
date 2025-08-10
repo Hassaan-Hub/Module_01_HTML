@@ -11,6 +11,8 @@ console.log(fruits.pop()); // last element delete
 
 console.log(fruits.push("Orange")); // last element add
 
+
+
 console.log(fruits.shift()); // first element delete
 
 console.log(fruits.unshift("Pinaepple")); // first element add
