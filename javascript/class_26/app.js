@@ -9,7 +9,9 @@
 
 // console.log(num);     // output dsf
 
+
 // console.log(num);    //  output dsf
+
 
 // {
 //     let num = "hello";
