@@ -68,3 +68,115 @@ const dummyData = [
 
 
 //============================================================ yaha tak aske sare method hain
+
+
+//  FILTER
+
+// var arr = [1, 4, 7, 123, 3]
+
+// function isEven(x){             // x == paramenter 
+//     return x % 2 === 0
+// }
+
+// function isOdd(x){              // x == paramenter 
+//     return x % 2 !== 0
+// }
+
+
+// // let res = isEven(6)   //  Argument
+
+
+// for (var i = 0; i < arr.length; i++){
+    
+//     if(isEven(arr[i])){
+//         console.log(arr[i] + " is Even");
+        
+//     }else if (isOdd(arr[i])){
+//         console.log(arr[i] + " is Odd");    
+//     }
+
+// }
+
+
+
+
+// const arr = [2, 4, 5, 7, 8, 6, 9]
+
+// const out = arr.filter((x)=>{
+//     return x > 6
+// })
+
+// console.log(out);
+
+
+//===========================================================================
+
+
+// let id = 4
+
+// const out = dummyData.filter((x) =>{                                // niche aska essy method hai
+//     return id !== x.id
+// }).map((x) =>{
+//     return x.name
+// })
+
+// console.log(out);
+
+
+
+// let id = 0
+
+// const out = dummyData.filter(x => id !== x.id).map(y => y.name)      // aska essy method
+
+// console.log(out);
+
+
+//===========================================================================
+
+
+// const arr = [2, 4, 6, 8, 12, 18, 20]
+
+// var max = 0;
+
+// for (var i = 0; i <arr.length; i++){
+//     if (max < arr[i]){
+//         max = arr[i]
+//     }
+// }
+
+// console.log(max);
+
+
+//=========================================================   as ke 2 method hain ak ye hai
+
+// const arr = [7, 8, 2, 9, 5, 4, 14, 18]
+
+// const out = arr.reduce((acc , curr) =>{
+//     if (acc < curr){
+//         acc = curr
+//     }
+//     return acc
+// }, 0)
+
+// console.log(out);
+
+// const arr = [7, 8, 2, 9, 5, 4, 14, 18]
+
+// const out = arr.reduce((acc , curr) =>{
+//     return acc > curr? acc : curr
+// },arr[0])
+
+// console.log(out);
+
+//===========================================================================   or ak ye hai
+
+
+
+const arr = [7, 8, 2, 9, 5, 4, 14, 18]
+
+const sum = arr.reduce((accumulator , current) =>{
+    accumulator = accumulator + current
+    return accumulator
+}, 0)
+
+console.log(sum);
