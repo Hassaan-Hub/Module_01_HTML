@@ -27,6 +27,7 @@
 
 
 
+
 // let obt = {
 //     dynamicKey: "hello world"
 // }
@@ -40,6 +41,30 @@
 // }
 
 // console.log(Object.values(obt1)[0]);
+
+
+
+// SPREAD OPERATOR  (...)
+
+
+
+let summerFruits = ['mango', 'apple', 'banana']
+let winterFruits = ['orange', 'Guava', 'Blueberry']
+
+let allFruits = [...summerFruits , ...winterFruits]
+
+alert(allFruits);
+
+
+
+
+
+
+
+
+
+
+
 
 
 
