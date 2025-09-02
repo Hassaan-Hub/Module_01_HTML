@@ -30,56 +30,56 @@
 // Simulated API
 
 
-const api = {
-    Order: c => Promise.resolve("ORDER123"),
-    Payment: o => Promise.resolve("PAYMENT456"),
-    Shipping: p => Promise.resolve("TRACK789"),
-    CheckDelivery: t => Promise.resolve("Delivered"),
-    updateWallet: s => Promise.resolve("Wallet Updated"),
-    walletSatus: w => Promise.resolve("SUCCESS")
-}
+// const api = {
+//     Order: c => Promise.resolve("ORDER123"),
+//     Payment: o => Promise.resolve("PAYMENT456"),
+//     Shipping: p => Promise.resolve("TRACK789"),
+//     CheckDelivery: t => Promise.resolve("Delivered"),
+//     updateWallet: s => Promise.resolve("Wallet Updated"),
+//     walletSatus: w => Promise.resolve("SUCCESS")
+// }
 
-let cart = ["Shoes", "Shirt", "Pant"];
+// let cart = ["Shoes", "Shirt", "Pant"];
 
-let order = api.Order(cart, function (orderId) {
-    api.Payment(orderId, function (paymentInfo) {
-        api.Shipping(paymentInfo, function (trackingId) {
-            api.CheckDelivery(trackingId, function (status) {
-                api.updateWallet(status, function (finalStatus) {
-                    api.walletSatus(finalStatus, function (status) {
-                        console.log("Final Status: ", status);
-                    })
-                })
-            })
-        })
-    })
-})
+// let order = api.Order(cart, function (orderId) {
+//     api.Payment(orderId, function (paymentInfo) {
+//         api.Shipping(paymentInfo, function (trackingId) {
+//             api.CheckDelivery(trackingId, function (status) {
+//                 api.updateWallet(status, function (finalStatus) {
+//                     api.walletSatus(finalStatus, function (status) {
+//                         console.log("Final Status: ", status);
+//                     })
+//                 })
+//             })
+//         })
+//     })
+// })
 
-api
-    .Order(["Shoes"])
-    .then((orderId) => {
-        console.log("Order ID: ", orderId);
-        return api.Payment(orderId);
-    })
-    .then((paymentInfo) => {
-        console.log("Payment Info: ", paymentInfo);
-        return api.Shipping(paymentInfo);
-    })
-    .then((trackingId) => {
-        console.log("Tracking ID: ", trackingId);
-        return api.CheckDelivery(trackingId);
-    })
-    .then((status) => {
-        console.log("Delivery Status: ", status);
-        return api.updateWallet(status);
-    })
-    .then((walletSatus) => {
-        console.log("Wallet Status: ", walletSatus);
-        return api.walletSatus(walletSatus);
-    })
-    .then((finalStatus) => {
-        console.log("Final Status: ", finalStatus);
-    })
+// api
+//     .Order(["Shoes"])
+//     .then((orderId) => {
+//         console.log("Order ID: ", orderId);
+//         return api.Payment(orderId);
+//     })
+//     .then((paymentInfo) => {
+//         console.log("Payment Info: ", paymentInfo);
+//         return api.Shipping(paymentInfo);
+//     })
+//     .then((trackingId) => {
+//         console.log("Tracking ID: ", trackingId);
+//         return api.CheckDelivery(trackingId);
+//     })
+//     .then((status) => {
+//         console.log("Delivery Status: ", status);
+//         return api.updateWallet(status);
+//     })
+//     .then((walletSatus) => {
+//         console.log("Wallet Status: ", walletSatus);
+//         return api.walletSatus(walletSatus);
+//     })
+//     .then((finalStatus) => {
+//         console.log("Final Status: ", finalStatus);
+//     })
 
 
 
@@ -131,5 +131,44 @@ api
 //     .then(Response => Response.json())  // convert Response to JSON
 //     .then(data => console.log(data))     // actual data
 //     .catch(error => console.error(error));
+
+
+
+// ✅ Using Promise Chaining
+
+api.Order()
+    .then(api.Payment)
+    .then(api.CheckDelivery)
+    .then(api.Shipping)
+    .then(api.updateWallet)
+    .then(api.walletSatus)
+    .then(status => console.log("final Status: ", status))
+    .catch(err => console.error("error: " , err))
+
+    
+// using async/await
+
+(async ()=> {
+    try {
+        const orderId = await api.Order();
+        const paymentId = await api.Payment(orderId);
+        const CheckDeliveryId = await api.CheckDelivery(paymentId);
+        const ShippingId = await api.Shipping(CheckDeliveryId);
+        const updateWalletId = await api.updateWallet(ShippingId);
+        const walletSatusId = await api.walletSatus(updateWalletId);
+        const statusId = await api.status(walletSatusId);
+        console.log("Final status: " , statusId)
+    } catch (arr) {
+        console.error("error: " , err)
+    }
+})();
+
+
+
+
+
+
+
+
 
 
