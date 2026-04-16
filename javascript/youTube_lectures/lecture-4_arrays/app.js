@@ -102,7 +102,7 @@
 
 
 // Qs
-let companies = ["Bloomberg", "Microsoft", "Uber", "Google", "IBM","Netflix"]
+// let companies = ["Bloomberg", "Microsoft", "Uber", "Google", "IBM","Netflix"]
 // normal
 // console.log(companies);
 // remove the first company of array
@@ -112,5 +112,5 @@ let companies = ["Bloomberg", "Microsoft", "Uber", "Google", "IBM","Netflix"]
 // companies.splice(2 , 1, "Ola");
 // console.log(companies);
 // add amazon at the end
-companies.push("Amazon")
-console.log(companies);
+// companies.push("Amazon")
+// console.log(companies);
