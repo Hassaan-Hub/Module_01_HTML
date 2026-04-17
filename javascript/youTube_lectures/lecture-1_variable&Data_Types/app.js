@@ -10,6 +10,7 @@
 
 
 
+
 // Variable Rules
 // 1. Variable names are case sensitive; "a" & "A" is different.
 // 2. Only letters, digits, underscore(_) and $ is allowed. (not even space)
