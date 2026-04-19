@@ -141,3 +141,43 @@
 //     return pre > cur ? pre : cur;
 // })
 // console.log(result1);
+
+
+// practice 
+// Qs. we are given array of marks of students. filter our of the marks of students 
+// that scored 90.
+
+// let num = [40, 60, 80, 90, 95, 99]
+// let res = num.filter((val) => {
+//     return val >= 90;
+// })
+// console.log(res);
+
+
+// Qs. take a number n as input from user. create an array of numbers from 1 to n.
+
+// let n = prompt("enter your ")
+
+// let arr = [];
+// for (let i = 1; i <= n; i++){
+//     arr[i - 1] = i
+// }
+// console.log(arr);
+
+
+// Qs. use the reduce method to calculate sum of all number in the array
+
+// let arr = [2, 4, 6, 7, 8, 4, 4, 3, 3, 2, 5, 7]
+// let result = arr.reduce((prev, curr) => {
+//     return prev + curr
+// })
+// console.log(result);
+
+
+// Qs. use the reduce method to calculate product of all number in the array
+
+// let arr = [2, 4, 6, 7, 8, 4, 4, 3, 3, 2, 5, 7]
+// let result = arr.reduce((prev, curr) => {
+//     return prev * curr
+// })
+// console.log(result);
