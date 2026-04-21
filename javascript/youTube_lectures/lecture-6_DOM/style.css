@@ -1,13 +1,23 @@
-h1 {
+/* h1 {
     color: blue;
     background: yellow;
-}
+} */
 
-button {
+/* button {
     background: blue;
     color: white;
 }
 
 body {
     background: aqua;
+} */
+
+
+
+.boxs {
+    width: 100px;
+    height: 100px;
+    border: 2px solid;
+    margin: 5px;
+    text-align: center;
 }
