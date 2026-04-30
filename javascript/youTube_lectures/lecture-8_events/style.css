@@ -1,4 +1,4 @@
-div{
+/* div{
     margin: 5px;
     height: 100px;
     width: 100px;
@@ -6,3 +6,19 @@ div{
     color: white;
     border: 1px solid black;
 }
+
+
+
+.dark{
+    background-color: black;
+    color: white;
+}
+
+.light{
+    background-color: white;
+    color: black;
+}
+
+#light{
+    margin-left: 1100px;
+} */
