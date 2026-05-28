@@ -9,7 +9,17 @@ html, body {
   width: 100%;
 }
 
+
+.mainCard{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
 .card{
+  width: 200px;
+  height: 200px;
   background-color: #ff3636;
   border-radius: 10px;
   margin: 20px;
