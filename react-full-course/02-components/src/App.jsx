@@ -42,72 +42,33 @@
 
 
 
-import React from 'react'
-import Second from './components/card.jsx'
+// import React from 'react'
+// import Second from './components/card.jsx'
 
-function App() {
+// function App() {
+//   return (
+//     <div className='mainCard'>
+//       <Second />
+//     </div>
+//   )
+// }
+
+// export default App
+
+
+
+
+import React from 'react'
+import Card from './components/card'
+import Navbar from './components/Navbar'
+
+
+const App = () => {
   return (
-    <div className='mainCard'>
-      <Second />
-      <Second />
-      <Second />
-      <Second />
-      <Second />
-      <Second />
-      <Second />
-      <Second />
-      <Second />
-      <Second />
-      <Second />
-      <Second />
-      <Second />
-      <Second />
-      <Second />
-      <Second />
-      <Second />
-      <Second />
-      <Second />
-      <Second />
-      <Second />
-      <Second />
-      <Second />
-      <Second />
-      <Second />
-      <Second />
-      <Second />
-      <Second />
-      <Second />
-      <Second />
-      <Second />
-      <Second />
-      <Second />
-      <Second />
-      <Second />
-      <Second />
-      <Second />
-      <Second />
-      <Second />
-      <Second />
-      <Second />
-      <Second />
-      <Second />
-      <Second />
-      <Second />
-      <Second />
-      <Second />
-      <Second />
-      <Second />
-      <Second />
-      <Second />
-      <Second />
-      <Second />
-      <Second />
-      <Second />
-      <Second />
-      <Second />
-      <Second />
-      <Second />
-      <Second />
+    <div>
+      <Navbar />
+      <Navbar />
+      <Card />
     </div>
   )
 }
