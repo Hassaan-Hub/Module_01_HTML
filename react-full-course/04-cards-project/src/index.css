@@ -13,9 +13,15 @@ html, body {
 
 
 .parent {
-  height: 100vh;
+  /* min-height: 100%; */
+  /* height: 100vh; */
   width: 100%;
   background-color: #111;
+  padding: 30px;
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .card{
@@ -88,7 +94,7 @@ html, body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-top: 1px solid #b1b1b1;
+  border-top: 1.5px solid #d7d7d7ce;
   padding-top: 15px;
 }
 
