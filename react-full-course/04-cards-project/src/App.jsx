@@ -5,7 +5,7 @@ const App = () => {
 
 const jobOpenings = [
   {
-    brandLogo: "https://logo.clearbit.com/google.com",
+    brandLogo: "https://static.vecteezy.com/system/resources/thumbnails/042/165/816/small/google-logo-transparent-free-png.png",
     name: "Google",
     datePosted: "2 days ago",
     post: "Frontend Developer",
@@ -15,7 +15,7 @@ const jobOpenings = [
     location: "Karachi, Pakistan",
   },
   {
-    brandLogo: "https://logo.clearbit.com/meta.com",
+    brandLogo: "https://lookaside.fbsbx.com/elementpath/media/?media_id=597423292333741&version=1779864741",
     name: "Meta",
     datePosted: "1 day ago",
     post: "React Developer",
@@ -25,7 +25,7 @@ const jobOpenings = [
     location: "Lahore, Pakistan",
   },
   {
-    brandLogo: "https://logo.clearbit.com/amazon.com",
+    brandLogo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrxaeYKwcmrtdCDVBsn9maZMXxYpJIcfoajw&s",
     name: "Amazon",
     datePosted: "5 days ago",
     post: "Software Engineer",
@@ -35,7 +35,7 @@ const jobOpenings = [
     location: "Islamabad, Pakistan",
   },
   {
-    brandLogo: "https://logo.clearbit.com/apple.com",
+    brandLogo: "https://pngdownload.io/wp-content/uploads/2023/12/Apple-Logo-Iconic-Tech-Brand-Symbol-PNG-Transparent-Representation-of-Innovation-and-Design-jpg.webp",
     name: "Apple",
     datePosted: "3 days ago",
     post: "UI Engineer",
@@ -45,7 +45,7 @@ const jobOpenings = [
     location: "Karachi, Pakistan",
   },
   {
-    brandLogo: "https://logo.clearbit.com/netflix.com",
+    brandLogo: "https://cdn.dribbble.com/userupload/34116929/file/original-26e501e97684a115bfff294b1f1d41b0.png?resize=752x&vertical=center",
     name: "Netflix",
     datePosted: "7 days ago",
     post: "Backend Developer",
@@ -55,7 +55,7 @@ const jobOpenings = [
     location: "Remote",
   },
   {
-    brandLogo: "https://logo.clearbit.com/microsoft.com",
+    brandLogo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpB_l-MNqiIwNMiKxF6kmARL-2_wkxl4sq_Q&s",
     name: "Microsoft",
     datePosted: "4 days ago",
     post: "Full Stack Developer",
@@ -65,7 +65,7 @@ const jobOpenings = [
     location: "Karachi, Pakistan",
   },
   {
-    brandLogo: "https://logo.clearbit.com/nvidia.com",
+    brandLogo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvrSOY40xxfTajE7wrm9sTXaNpB95mie31UA&s",
     name: "NVIDIA",
     datePosted: "6 days ago",
     post: "AI Engineer",
@@ -75,7 +75,7 @@ const jobOpenings = [
     location: "Remote",
   },
   {
-    brandLogo: "https://logo.clearbit.com/tesla.com",
+    brandLogo: "https://blog.logomaster.ai/hs-fs/hubfs/tesla-logo-shield.jpg?width=672&height=454&name=tesla-logo-shield.jpg",
     name: "Tesla",
     datePosted: "8 days ago",
     post: "JavaScript Developer",
@@ -85,7 +85,7 @@ const jobOpenings = [
     location: "Lahore, Pakistan",
   },
   {
-    brandLogo: "https://logo.clearbit.com/openai.com",
+    brandLogo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6t8cfR8hWuQyFLs2xq8BrCWte3vDuIsylIQ&s",
     name: "OpenAI",
     datePosted: "2 days ago",
     post: "Frontend Engineer",
@@ -95,7 +95,7 @@ const jobOpenings = [
     location: "Remote",
   },
   {
-    brandLogo: "https://logo.clearbit.com/adobe.com",
+    brandLogo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcST8Vejmqk6CACkWGHIdxdBboQyX_bDTvqXLQ&s",
     name: "Adobe",
     datePosted: "9 days ago",
     post: "Web Developer",
@@ -110,7 +110,8 @@ const jobOpenings = [
 return (
   <div className='parent'>
       {jobOpenings.map((elem)=>{
-        return <Card company={elem.name} />
+        return <Card brandLogo={elem.brandLogo} company={elem.name} date={elem.datePosted} post={elem.post}
+        tag1={elem.tag1} tag2={elem.tag2} pay={elem.pay} location={elem.location} />
         
       })}
 
