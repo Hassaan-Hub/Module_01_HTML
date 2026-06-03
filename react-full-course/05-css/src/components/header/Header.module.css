@@ -1,0 +1,15 @@
+.header{
+  background-color: lightseagreen;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  margin: 5px;
+}
+
+
+.btn{
+  background-color: yellow;
+  font-size: x-large;
+  font-weight: 500;
+}
