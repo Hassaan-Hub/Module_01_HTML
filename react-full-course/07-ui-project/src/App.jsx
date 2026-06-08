@@ -22,7 +22,8 @@ const App = () => {
   ]
   return (
     <div>
-      <Section1 />
+      <Section1 users={users} />
+      
       <Section2 />
     </div>
   )
