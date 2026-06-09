@@ -23,9 +23,9 @@ const App = () => {
     <div onWheel={(elem) => {
       pageScrolling(elem.deltaY)
     }}>
-      <div className='h-[100vh] w-full bg-red-500'></div>
+      {/* <div className='h-[100vh] w-full bg-red-500'></div>
       <div className='h-[100vh] w-full bg-pink-500'></div>
-      <div className='h-[100vh] w-full bg-yellow-500'></div>
+      <div className='h-[100vh] w-full bg-yellow-500'></div> */}
 
 
 
