@@ -1,11 +1,11 @@
 import React from 'react'
 
-export const RightCardContent = () => {
+export const RightCardContent = (props) => {
     return (
         <div className='absolute top-0 left-0 h-full w-full p-8 flex flex-col 
             justify-between'>
             <h2 className='bg-white text-1xl font-bold h-10 w-10 rounded-full flex items-center 
-                justify-center'>1</h2>
+                justify-center'>{props.id + 1}</h2>
             <div className=''>
                 <p className='text-lg mb-6 text-white leading-normal'>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                     Iure dolorem ad debitis consequatur!</p>
