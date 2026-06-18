@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { X } from 'lucide-react';
 
 const App = () => {
 
@@ -18,6 +19,13 @@ const App = () => {
 
     setTitle('')
     setDetails('')
+  }
+
+  const deleteNode = (idx)=>{
+    const copyTask = [...task]
+    copyTask.splice(idx, 1)
+
+    setTask(copyTask)
   }
 
   return (
@@ -53,10 +61,20 @@ const App = () => {
       </form>
       <div className="lg:w-1/2 lg:border-l-2 p-12">
         <h1 className='text-3xl flex justify-center font-bold'>Your Notes</h1>
-        <div className="flex flex-wrap gap-5 mt-4 h-full overflow-auto scrollbar-none">
+        <div className="flex flex-wrap gap-5 mt-4 h-[90%] overflow-auto scrollbar-none">
           {task.map((elem, idx) => {
-            return <div key={idx} className="h-44 w-36 rounded-2xl text-black bg-white">
-              <h3>{ elem.title }</h3>
+            return <div key={idx}
+              className="relative h-44 w-36 rounded-2xl p-4 text-black bg-white 
+                    bg-[url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjkdtYc7pr86LYZbm80VMbsfUnIBI_M_foMw&s')] 
+                    bg-center bg-no-repeat bg-[length:160%]"
+            >
+              <h2 onClick={()=>{
+                deleteNode(idx)
+              }} className='absolute bottom-5 right-5 bg-red-500 p-0.5 rounded-full text-xs'>
+                <X size={16} color="#ffffff" strokeWidth={2.75} />
+              </h2>
+              <h3 className='leading-tight text-lg font-bold'>{elem.title}</h3>
+              <p className="mt-3 leading-tight font-medium text-gray-500">{elem.details}</p>
             </div>
           })}
         </div>
