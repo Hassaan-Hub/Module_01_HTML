@@ -61,10 +61,10 @@ const App = () => {
       </form>
       <div className="lg:w-1/2 lg:border-l-2 p-12">
         <h1 className='text-3xl flex justify-center font-bold'>Your Notes</h1>
-        <div className="flex flex-wrap gap-5 mt-4 h-[90%] overflow-auto scrollbar-none">
+        <div className="flex flex-wrap gap-x-6 mt-4 h-[90%] overflow-auto scrollbar-none">
           {task.map((elem, idx) => {
             return <div key={idx}
-              className="relative h-44 w-36 rounded-2xl p-4 text-black bg-white 
+              className="relative h-44 w-[144px] rounded-2xl p-4 text-black bg-white 
                     bg-[url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjkdtYc7pr86LYZbm80VMbsfUnIBI_M_foMw&s')] 
                     bg-center bg-no-repeat bg-[length:160%]"
             >
