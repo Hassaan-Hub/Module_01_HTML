@@ -17,7 +17,7 @@ const App = () => {
 
   const [data, setData] = useState([])
 
-  const getData = async ()=>{
+  const getData = async () => {
     const response = await axios.get('https://jsonplaceholder.typicode.com/users')
     console.log(response);
     setData(response.data)
@@ -27,7 +27,7 @@ const App = () => {
     <div>
       <button onClick={getData}>data</button>
       <div>
-        {data.map((elem,idx)=>{
+        {data.map((elem, idx) => {
           return <h1>hello, {elem.username}, {idx}</h1>
         })}
       </div>
