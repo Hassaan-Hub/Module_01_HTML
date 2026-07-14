@@ -12,6 +12,10 @@ import {
     setDoc,
     doc,
     getDoc,
+    collection,
+    query,
+    where,
+    getDocs
 } from "https://www.gstatic.com/firebasejs/12.16.0/firebase-firestore.js";
 
 const firebaseConfig = {
@@ -44,6 +48,7 @@ function signupUser(fullName, email, password, city) {
             })
                 .then(() => {
                     console.log("--> data successfully added");
+                    checkUserStatus();
                 })
                 .catch((error) => {
                     console.log(error);
@@ -79,7 +84,7 @@ function checkUserStatus() {
         if (user) {
             console.log(user.pathname, "--> pathname");
 
-            if (window.location.pathname !== "dashboard.html") {
+            if (window.location.pathname !== "/dashboard.html") {
                 window.location = "/dashboard.html"
             }
         } else {
@@ -115,10 +120,27 @@ async function getUserSingleData(unqiue) {
 }
 
 
+async function getMutliUsersData() {
+
+    const userArr = [];
+    const q = query(collection(db, "users"));
+
+    const querySnapshot = await getDocs(q);
+    querySnapshot.forEach((doc) => {
+        console.log(doc.id, " => ", doc.data());
+        userArr.push(doc.data())
+    });
+    console.log(userArr, "--> user Array");
+
+    return userArr
+}
+
+
 export {
     signupUser,
     loginUser,
     checkUserStatus,
     logout,
     getUserSingleData,
+    getMutliUsersData,
 }

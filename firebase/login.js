@@ -1,7 +1,7 @@
 import {
     loginUser,
     checkUserStatus,
-} from "./firebse.js";
+} from "./firebase.js";
 
 checkUserStatus();
 
