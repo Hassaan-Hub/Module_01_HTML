@@ -5,6 +5,7 @@ import {
     signInWithEmailAndPassword,
     onAuthStateChanged,
     signOut,
+    deleteUser,
 } from "https://www.gstatic.com/firebasejs/12.16.0/firebase-auth.js"
 
 import {
@@ -15,7 +16,8 @@ import {
     collection,
     query,
     where,
-    getDocs
+    getDocs,
+    deleteDoc,
 } from "https://www.gstatic.com/firebasejs/12.16.0/firebase-firestore.js";
 
 const firebaseConfig = {
@@ -127,7 +129,7 @@ async function getMutliUsersData() {
 
     const querySnapshot = await getDocs(q);
     querySnapshot.forEach((doc) => {
-        userArr.push(doc.data())
+        // userArr.push(doc.data())
         const user = doc.data()
         userArr.push({
             id: doc.id,
@@ -143,7 +145,20 @@ async function updateUserData(userDeta, uid, collection) {
         setDoc(doc(db, collection, uid), userDeta)
     } catch (error) {
         console.log(error, "==> error aya hai");
-        
+
+    }
+}
+
+
+
+async function deleteUserData(user) {
+    try {
+        await deleteDoc(doc(db, "users", user));
+        await deleteUser(user)
+        console.log(user);
+    }
+    catch (error) {
+        console.log(error.message);
     }
 }
 
@@ -156,4 +171,5 @@ export {
     getUserSingleData,
     getMutliUsersData,
     updateUserData,
+    deleteUserData,
 }

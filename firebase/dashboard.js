@@ -1,12 +1,22 @@
-import { getMutliUsersData, logout } from "./firebase.js";
+import {
+    getMutliUsersData,
+    logout,
+    updateUserData,
+    deleteUserData,
+} from "./firebase.js";
 
-
-
+const logoutBtn = document.getElementById("logoutBtn");
 const userData = await getMutliUsersData()
+
 const userName = document.getElementById("userName");
 const firstName = document.getElementById("firstName");
 const lastName = document.getElementById("lastName");
 const description = document.getElementById("description");
+
+
+logoutBtn.addEventListener("click",()=>{
+    logout();
+})
 
 
 const userDataHtml = userData.map((data) => {
@@ -28,7 +38,7 @@ const userDataHtml = userData.map((data) => {
                 data-bs-toggle="modal" data-bs-target="#exampleModal">
                     Update
                 </button>
-                <button class="btn btn-danger">Delete</button>
+                <button class="btn btn-danger" id=${data.id}>Delete</button>
             </div>
         </div>
     `
@@ -41,10 +51,12 @@ const body = document.body;
 
 body.addEventListener("click", (e) => {
 
-    if(e.target.innerHTML !== "Update") return;
+    if (e.target.innerHTML !== "Update") return;
 
     const selectedUser = userData.find((user) => user.id === e.target.id)
     selectedUserDetails = selectedUser;
+    console.log(selectedUserDetails);
+    
 
     userName.value = selectedUser?.fullName || "No userName provided"
     firstName.value = selectedUser?.firstName || "No firstName provided"
@@ -55,7 +67,10 @@ body.addEventListener("click", (e) => {
 
 const saveChangesBtn = document.getElementById("saveChangesBtn");
 
-saveChangesBtn.addEventListener("click", ()=>{
-    console.log("==>click howa");
-    console.log(selectedUserDetails);
+body.addEventListener("click", async (e) => {
+    if(e.target.innerHTML !== "Delete") return;
+
+    const userId = e.target.id;
+    await deleteUserData(userId)
+    window.location.reload();
 })
