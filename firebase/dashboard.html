@@ -9,23 +9,59 @@
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 </head>
 <style>
-    *{
+    * {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
     }
-    #mainDataContainer{
+
+    #mainDataContainer {
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
         gap: 20px;
     }
 </style>
+
 <body>
     <h1>Hello, world!</h1>
 
     <div id="mainDataContainer">
-        
+
+    </div>
+
+    <!-- Button trigger modal -->
+    <!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        Launch demo modal
+    </button> -->
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Update user Data</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h2 class="fs-5">User Name</h2>
+                    <input type="text" placeholder="UserName" id="userName">
+                    <hr>
+                    <h2 class="fs-5">First Name</h2>
+                    <input type="text" placeholder="FirstName" id="firstName">
+                    <hr>
+                    <h2 class="fs-5">Last Name</h2>
+                    <input type="text" placeholder="LastName" id="lastName">
+                    <hr>
+                    <h2 class="fs-5">Description</h2>
+                    <textarea name="" id="description" cols="40"></textarea>
+                    <hr>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" id="saveChangesBtn">Save changes</button>
+                </div>
+            </div>
+        </div>
     </div>
 
 </body>
@@ -33,4 +69,5 @@
     integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
     crossorigin="anonymous"></script>
 <script type="module" src="dashboard.js"></script>
+
 </html>

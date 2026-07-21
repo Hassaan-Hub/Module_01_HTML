@@ -127,12 +127,24 @@ async function getMutliUsersData() {
 
     const querySnapshot = await getDocs(q);
     querySnapshot.forEach((doc) => {
-        console.log(doc.id, " => ", doc.data());
         userArr.push(doc.data())
+        const user = doc.data()
+        userArr.push({
+            id: doc.id,
+            ...user
+        })
     });
-    console.log(userArr, "--> user Array");
-
     return userArr
+}
+
+
+async function updateUserData(userDeta, uid, collection) {
+    try {
+        setDoc(doc(db, collection, uid), userDeta)
+    } catch (error) {
+        console.log(error, "==> error aya hai");
+        
+    }
 }
 
 
@@ -143,4 +155,5 @@ export {
     logout,
     getUserSingleData,
     getMutliUsersData,
+    updateUserData,
 }
