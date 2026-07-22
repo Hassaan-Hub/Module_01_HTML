@@ -154,7 +154,6 @@ async function updateUserData(userDeta, uid, collection) {
 async function deleteUserData(user) {
     try {
         await deleteDoc(doc(db, "users", user));
-        await deleteUser(user)
         console.log(user);
     }
     catch (error) {

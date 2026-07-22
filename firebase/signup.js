@@ -14,14 +14,24 @@ const signupBtn = document.getElementById("signupBtn");
 const getData = document.getElementById("getData");
 const getMultiData = document.getElementById("getMultiData");
 
+const loader = document.getElementById("loader");
+const loaderContainer = document.getElementById("loaderContainer");
+
 signupBtn.addEventListener("click", () => {
-    signupUser(fullName.value, email.value, password.value, city.value);
+    loaderContainer.style.display = "flex";
+    signupBtn.disabled = true;
+    setTimeout(() => {
+        signupUser(fullName.value, email.value, password.value, city.value);
+        
+        loaderContainer.style.display = "none";
+        signupBtn.disabled = false;
+    }, 4000)
 })
 
 
 getData.addEventListener("click", () => {
     getUserSingleData("AV9hQbxFEhUslMuSU66AzjYgEV72")
-})    
+})
 
 getMultiData.addEventListener("click", () => {
     getMutliUsersData()
