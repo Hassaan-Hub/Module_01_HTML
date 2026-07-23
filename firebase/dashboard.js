@@ -1,3 +1,4 @@
+import { uploadImage } from "./cloudniary.js";
 import {
     getMutliUsersData,
     logout,
@@ -19,6 +20,7 @@ logoutBtn.addEventListener("click", () => {
 const userDataHtml = userData.map((data) => {
     return `
     <div class="card" style="width: 18rem;">
+    <img src=${data?.profilePic} class="card-img-top" alt="">
     <div class="card-body">
                 <h5 class="card-title">Card title</h5>
                 <p class="card-text">${data.description}</p>
@@ -47,13 +49,13 @@ const fullName = document.getElementById("fullName");
 const firstName = document.getElementById("firstName");
 const lastName = document.getElementById("lastName");
 const description = document.getElementById("description");
+const profilePic = document.getElementById("profilePic");
 
 const body = document.body;
 
 body.addEventListener("click", (e) => {
 
     if (e.target.innerHTML !== "Update") return;
-
 
     const selectedUser = userData.find((user) => user.id === e.target.id);
     selectedUserDetails = selectedUser;
@@ -72,17 +74,25 @@ const saveChangesBtn = document.getElementById("saveChangesBtn");
 const loader = document.getElementById("loader");
 
 saveChangesBtn.addEventListener("click", async () => {
-    console.log("==>> click hogaya");
+    saveChangesBtn.disabled = true;
+    loader.style.display = "block";
+    
+    // cloudniary code ------------------------------------------>
+    const formData = new FormData();
+
+    formData.append('file', profilePic.files[0]);
+    formData.append('upload_preset', 'save-practice');
+    
+    const secure_url = await uploadImage(formData);
 
     selectedUserDetails.fullName = fullName.value;
     selectedUserDetails.firstName = firstName.value;
     selectedUserDetails.lastName = lastName.value;
     selectedUserDetails.description = description.value;
+    selectedUserDetails.profilePic = secure_url;
 
     console.log("==> after update", selectedUserDetails);
 
-    saveChangesBtn.disabled = true;
-    loader.style.display = "block";
 
     await updateUserData(selectedUserDetails, selectedUserDetails.id, "users")
 
@@ -105,4 +115,4 @@ body.addEventListener("click", async (e) => {
 })
 
 
-authDeleteUser();
+// authDeleteUser();
