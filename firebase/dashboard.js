@@ -3,6 +3,7 @@ import {
     logout,
     updateUserData,
     deleteUserData,
+    authDeleteUser,
 } from "./firebase.js";
 
 const logoutBtn = document.getElementById("logoutBtn");
@@ -102,3 +103,6 @@ body.addEventListener("click", async (e) => {
     await deleteUserData(userId)
     window.location.reload();
 })
+
+
+authDeleteUser();

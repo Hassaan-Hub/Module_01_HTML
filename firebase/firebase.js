@@ -162,6 +162,17 @@ async function deleteUserData(user) {
 }
 
 
+function authDeleteUser() {
+    const user = auth.currentUser;
+
+    deleteUser(user)
+        .then(() => {
+            console.log("==>>user Delete", user);
+        }).catch((error) => {
+            console.log("==>>error Delete", error);
+        });
+}
+
 export {
     signupUser,
     loginUser,
@@ -171,4 +182,5 @@ export {
     getMutliUsersData,
     updateUserData,
     deleteUserData,
+    authDeleteUser,
 }
