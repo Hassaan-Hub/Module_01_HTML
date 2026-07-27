@@ -13,4 +13,3 @@ export async function uploadImage(formData) {
     const { secure_url } = await response.json()
     return secure_url;
 }
-
