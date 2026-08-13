@@ -1,35 +1,43 @@
 import axios from 'axios'
-import { useState } from 'react'
+import React, { useState } from 'react'
 
 const App = () => {
 
-  // const getData = async () => {
-  //   const response = await fetch('https://jsonplaceholder.typicode.com/todos')
-  //   const data = await response.json()
-  //   console.log(data);
-  // }
-
-
-  // const getData = async () => {
-  //   const {data} = await axios.get('https://jsonplaceholder.typicode.com/users')
-  //   console.log(data);
-  // }
-
-  const [data, setData] = useState([])
+  const [userData, setUserData] = useState([])
 
   const getData = async () => {
-    const response = await axios.get('https://jsonplaceholder.typicode.com/users')
-    console.log(response);
-    setData(response.data)
+    const response = await axios.get('https://picsum.photos/v2/list?page=2&limit=15')
+    setUserData(response.data)
+    console.log(response.data);
+  }
+
+
+  let printUserData = "No User Data"
+
+  if (userData.length > 0) {
+    printUserData = userData.map((elem, idx) => {
+      return <div className='h-40 w-44 overflow-hidden rounded-xl' key={idx}>
+        <a href={elem.url}>
+          <div>
+            <img className='h-full w-full object-cover rounded-xl ' src={elem.download_url} alt="image" />
+          </div>
+          <h2 className='font-bold text-lg'>{elem.author}</h2>
+        </a>
+      </div>
+    })
   }
 
   return (
-    <div>
-      <button onClick={getData}>data</button>
-      <div>
-        {data.map((elem, idx) => {
-          return <h1>hello, {elem.username}, {idx}</h1>
-        })}
+    <div className='overflow-auto h-screen'>
+      <button className='bg-amber-400 text-black rounded-2xl cursor-pointer m-3 px-3 py-1 text-2xl'
+        onClick={() => {
+          getData();
+        }}
+      >Get Data
+      </button>
+
+      <div className='flex flex-wrap gap-2'>
+        {printUserData}
       </div>
     </div>
   )
