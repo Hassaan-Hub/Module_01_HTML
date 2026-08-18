@@ -14,7 +14,6 @@ const Navbar2 = () => {
             >
                 Return to Home Page
             </button>
-
             <button onClick={() => {
                 navigate(-1);
             }}
@@ -22,7 +21,6 @@ const Navbar2 = () => {
             >
                 Back
             </button>
-            
             <button onClick={() => {
                 navigate(+1);
             }}
