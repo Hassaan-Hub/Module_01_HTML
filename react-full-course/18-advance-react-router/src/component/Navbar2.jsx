@@ -21,6 +21,13 @@ const Navbar2 = () => {
             >
                 Back
             </button>
+            <button onClick={() => {
+                navigate(+1);
+            }}
+                className='bg-emerald-700 py-2 px-5 m-2 active:scale-95 cursor-pointer rounded'
+            >
+                Next
+            </button>
         </div>
     )
 }
