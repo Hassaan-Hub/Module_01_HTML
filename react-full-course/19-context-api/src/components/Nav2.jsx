@@ -6,7 +6,6 @@ const Nav2 = ({ children }) => {
     const { theme, setTheme } = useContext(ThemeContext);
 
     console.log(theme);
-    
 
     const themeFunction = () => {
         console.log('theme changed');
