@@ -33,7 +33,6 @@ app.delete('/notes/:index', (req, res) => {
     })
 })
 
-
 app.patch('/notes/:index', (req, res) => {
     
     const index = req.params.index
@@ -46,7 +45,5 @@ app.patch('/notes/:index', (req, res) => {
         message: "Note updated successfully"
     })
 })
-
-
 
 module.exports = app;
